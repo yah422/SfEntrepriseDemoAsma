@@ -5,6 +5,9 @@
 {% block body %}
     <h1> Listes des entreprises </h1>
 
-    {{ controller_name }}
-
+    {% for entreprise in entreprises %}
+    
+        {{ entreprise }}
+        
+    {% endfor %}
 {% endblock %}
