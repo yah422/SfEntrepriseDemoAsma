@@ -19,5 +19,18 @@ class HomeController extends AbstractController
             'entreprises' => $entreprises
 
         ]);
+    
     }
+
+    #[Route('/home/{id}', name: 'show_home')]
+    public function show(Entreprise $entreprise): Response
+    {
+        return $this->render('home/show.html.twig', [
+            'entreprise' => $entreprise
+
+        ]);
+
+    }
+
+
 }
