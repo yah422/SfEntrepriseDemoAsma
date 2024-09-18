@@ -138,6 +138,6 @@ class Entreprise
     }
 
     public function __toString(){
-        return $this->raisonSociale . "(" . $this->cp . " " . $this->ville . ")";
+        return $this->raisonSociale;
     }
 }
