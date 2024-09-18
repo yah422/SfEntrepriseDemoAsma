@@ -4,12 +4,14 @@
 {% block title %} Liste des entreprises {% endblock %}
 
 {% block body %}
-    <h1> Listes des entreprises </h1>
+    <h1 class="mx-5 mt-3"> Listes des entreprises </h1>
 
-    {% for entreprise in entreprises %}
+    <div class="mx-5">
+        {% for entreprise in entreprises %}
 
-    <a href="{{ path('show_home',{'id': entreprise.id })}}"> {{ entreprise }} <br> </a>
-        
-    {% endfor %}
+        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_home',{'id': entreprise.id })}}"> {{ entreprise }} <br> </a>
+            
+        {% endfor %}
+    </div>
 
 {% endblock %}

@@ -9,7 +9,7 @@
 
     {% for employe in employes %}
 
-        <a href="{{ path('show_employe',{'id': employe.id })}}"> {{ employe }} <br></a>
+        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_employe',{'id': employe.id })}}"> {{ employe }} <br></a>
 
     {% endfor %}
 
