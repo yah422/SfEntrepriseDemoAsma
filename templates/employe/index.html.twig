@@ -9,7 +9,7 @@
 
     {% for employe in employes %}
 
-        <a href=""> {{ employe }} <br></a>
+        <a href="{{ path('show_employe',{'id': employe.entreprise.id })}}"> {{ employe }} <br></a>
 
     {% endfor %}
 

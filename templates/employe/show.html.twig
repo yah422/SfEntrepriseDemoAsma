@@ -1,0 +1,19 @@
+{# héritage de vue #}
+{% extends 'base.html.twig' %}
+
+{% block title %} Liste des entreprises {% endblock %}
+
+{% block body %}
+    <h1> Détail employé </h1>
+    <h2> {{ employe}} </h2>
+
+    <p>
+        Entreprise: {{ employe.entreprise}} <br>
+        Nom: {{ employe.nom }} <br>
+        Prénom: {{ employe.prenom}} <br>
+        Date d'embauche: {{ employe.dateEmbauche | date('d.m.Y') }} <br>
+        Date de Naissance: {{ employe.dateNaissance  | date('d.m.Y') }} <br>
+    </p>
+
+
+{% endblock %}
