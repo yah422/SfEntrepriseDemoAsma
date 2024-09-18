@@ -1,7 +1,7 @@
 {# héritage de vue #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajout Entreprise{% endblock %}
+{% block title %}Ajout Employé{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -9,11 +9,12 @@
 {% endblock %}
 
 {% block body %}     
-    <h1> Ajouter une entreprise </h1>
+    <h1> Ajouter un employé </h1>
 
-{{ form(formAddEntreprise) }}
+    {{ form(formAddEmploye) }}
 
 {% endblock %}
+
 
 {% block javascripts %}
     <script src="{{ asset('js/script.js')}}"></script>
@@ -25,3 +26,9 @@
 
 
 
+
+
+
+
+
+        

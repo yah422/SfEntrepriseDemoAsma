@@ -25,7 +25,7 @@ class EmployeType extends AbstractType
             ->add('ville')
             ->add('entreprise', EntityType::class, [
                 'class' => Entreprise::class,
-                'choice_label' => 'id',
+                'choice_label' => 'raisonSociale',
             ])
         ;
     }
