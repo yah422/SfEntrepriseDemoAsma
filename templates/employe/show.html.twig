@@ -4,13 +4,16 @@
 {% block title %} Liste des entreprises {% endblock %}
 
 {% block body %}
+
     <h1> Détail employé </h1>
     <h2> {{ employe}} </h2>
 
     <p>
         Entreprise: {{ employe.entreprise}} <br>
+        Ville: {% if employe.ville %} {{ employe.ville}} {% else %} Aucune information {% endif %} <br>
         Nom: {{ employe.nom }} <br>
         Prénom: {{ employe.prenom}} <br>
+        Age: {{ employe.age }} ans<br>
         Date d'embauche: {{ employe.dateEmbauche | date('d.m.Y') }} <br>
         Date de Naissance: {{ employe.dateNaissance  | date('d.m.Y') }} <br>
     </p>

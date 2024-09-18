@@ -12,5 +12,16 @@
         Date de créaction: {{ entreprise.dateCreation | date('d.m.Y') }} <br>
     </p>
 
+    <h3> Listes des salariés </h3>
+
+    {% if entreprise.employes | length > 0 %}
+
+        {% for employe in entreprise.employes %}
+            <a href=" {{ path('show_employe', {'id':employe.id })}}"> {{ employe }} </a> <br>
+        {% endfor %}
+    {% else %}
+        <p> Aucun salarié dans cette entreprise </p>
+    {% endif %}
+
 
 {% endblock %}
