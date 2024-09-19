@@ -31,13 +31,13 @@ class HomeController extends AbstractController
         if(!$entreprise){
             $entreprise = new Entreprise();
         }
-        
-        $entreprise = new Entreprise();
 
-        $form = $this->createForm(EntrepriseType::class,$entreprise);
+        $form = $this->createForm(EntrepriseType::class, $entreprise);
 
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
+            
             $entreprise = $form->getData();
             // prepare en PDO
             $entityManager->persist($entreprise);

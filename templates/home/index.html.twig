@@ -9,7 +9,9 @@
     <div class="mx-5">
         {% for entreprise in entreprises %}
 
-        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_home',{'id': entreprise.id })}}"> {{ entreprise }} <br> </a>
+        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_home',{'id': entreprise.id })}}"> {{ entreprise }} </a>
+        <a class="btn btn-warning" href="{{ path('edit_home',{'id': entreprise.id })}}"> Edit </a> <br>
+
             
         {% endfor %}
     </div>
