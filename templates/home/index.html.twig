@@ -4,6 +4,7 @@
 {% block title %} Liste des entreprises {% endblock %}
 
 {% block body %}
+
     <h1 class="mx-5 mt-3"> Listes des entreprises </h1>
 
     <div class="mx-5">
@@ -12,7 +13,6 @@
         <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_home',{'id': entreprise.id })}}"> {{ entreprise }} </a>
         <a class="btn btn-warning" href="{{ path('edit_home',{'id': entreprise.id })}}"> Edit </a> <br>
 
-            
         {% endfor %}
     </div>
 

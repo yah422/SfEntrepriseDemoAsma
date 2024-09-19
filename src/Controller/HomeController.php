@@ -37,7 +37,7 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $entreprise = $form->getData();
             // prepare en PDO
             $entityManager->persist($entreprise);
@@ -48,7 +48,8 @@ class HomeController extends AbstractController
         }
 
         return $this->render('home/new.html.twig',[
-            'formAddEntreprise' => $form,
+            'formAddEntreprise' => $form
+        
         ]);
     }
 
