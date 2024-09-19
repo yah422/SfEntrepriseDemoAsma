@@ -46,15 +46,23 @@ class EmployeController extends AbstractController
 
             return $this->redirectToRoute('app_employe');
         }
-
-        return $this->render('home/new.html.twig',[
-            'formAddEntreprise' => $form,
-        ]);
         
         return $this->render('employe/new.html.twig',[
             'formAddEmploye' => $form,
         ]);
     }
+
+
+    #[Route('/employe/{id}/supp', name: 'supp_employe')]
+    public function supp(Employe $employe, EntityManagerInterface $entityManager ){
+
+        $entityManager->remove($employe);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_employe');
+
+    }
+
 
     #[Route('/employe/{id}', name: 'show_employe')]
     public function show(Employe $employe): Response

@@ -10,8 +10,10 @@
     <div class="mx-5">
         {% for employe in employes %}
 
-            <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_employe',{'id': employe.id })}}"> {{ employe }} <br></a>
-            <a class="btn btn-warning" href="{{ path('edit_employe',{'id': employe.id })}}"> Edit </a> <br>
+            <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('show_employe',{'id': employe.id })}}"> {{ employe }} </a>
+            <a class="btn btn-warning" href="{{ path('edit_employe',{'id': employe.id })}}"> Edit </a>
+            <a class="btn btn-danger" href="{{ path('supp_employe',{'id': employe.id })}}"> Supprimer </a> <br>
+
 
         {% endfor %}
     </div>

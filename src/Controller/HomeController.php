@@ -53,6 +53,18 @@ class HomeController extends AbstractController
         ]);
     }
 
+
+    #[Route('/home/{id}/supp', name: 'supp_entreprise')]
+    public function supp(Entreprise $entreprise, EntityManagerInterface $entityManager ){
+
+        $entityManager->remove($entreprise);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_home');
+
+    }
+
+
     #[Route('/home/{id}', name: 'show_home')]
     public function show(Entreprise $entreprise): Response
     {
@@ -63,3 +75,4 @@ class HomeController extends AbstractController
 
     }
 }
+
