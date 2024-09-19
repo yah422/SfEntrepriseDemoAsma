@@ -25,8 +25,13 @@ class HomeController extends AbstractController
     }
 
     #[Route('/home/new', name: 'new_home')]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    #[Route('/home/{id}/edit', name: 'edit_home')]
+    public function new_edit(Entreprise $entreprise = null, Request $request, EntityManagerInterface $entityManager): Response
     {
+        if(!$entreprise){
+            $entreprise = new Entreprise();
+        }
+        
         $entreprise = new Entreprise();
 
         $form = $this->createForm(EntrepriseType::class,$entreprise);
